@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Da Alleez Café</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🌸 Da Alleez Café 🌸
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#delivery">Delivery</a>
+<a href="#reviews">Reviews</a>
+
+<button id="cart-btn">
+🛒 Cart
+<span id="cart-count">0</span>
+</button>
+
+</nav>
+
+</header>
+
+<section id="home" class="hero">
+
+<div class="hero-text">
+
+<h1>Welcome to Da Alleez Café</h1>
+
+<p>
+Cute treats, cozy drinks and kawaii happiness in every order!
+</p>
+
+<a href="#menu" class="order-btn">
+Order Now 🍓
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600"
+alt="Cafe">
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>💌 About Us</h2>
+
+<p>
+
+Welcome to Da Alleez Café!
+
+Our little café was created with love to bring delicious drinks,
+adorable snacks and sweet memories to everyone.
+
+Every order is prepared with care and packed beautifully.
+
+Thank you for supporting our small café!
+
+🌸🎀
+
+</p>
+
+</section>
+
+<section id="menu">
+
+<h2>🍽 Our Menu</h2>
+
+<div class="menu-grid">
+
+<div class="card">
+
+<h3>🍋 Normal Lemonade</h3>
+
+<p>50 Tk</p>
+
+<button onclick="addToCart('Normal Lemonade',50)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>💗 Pink Lemonade</h3>
+
+<p>40 Tk</p>
+
+<button onclick="addToCart('Pink Lemonade',40)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>🌊 Blue Ocean</h3>
+
+<p>60 Tk</p>
+
+<button onclick="addToCart('Blue Ocean',60)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>☕ Cold Coffee</h3>
+
+<p>100 Tk</p>
+
+<button onclick="addToCart('Cold Coffee',100)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>🫐 Blueberry Pancake</h3>
+
+<p>90 Tk</p>
+
+<button onclick="addToCart('Blueberry Pancake',90)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>🍟 French Fries</h3>
+
+<p>30 Tk</p>
+
+<button onclick="addToCart('French Fries',30)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>🍜 Instant Cup Noodles</h3>
+
+<p>30 Tk</p>
+
+<button onclick="addToCart('Instant Cup Noodles',30)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>🍱 Bento Box</h3>
+
+<p>200 Tk</p>
+
+<button onclick="addToCart('Bento Box',200)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>🍰 Biscuit-Flavoured Cream Cake (Small)</h3>
+
+<p>399 Tk</p>
+
+<button onclick="addToCart('Cake Small',399)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>🎂 Biscuit-Flavoured Cream Cake (Big)</h3>
+
+<p>599 Tk</p>
+
+<button onclick="addToCart('Cake Big',599)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="delivery">
+
+<h2>🚚 Delivery Charge</h2>
+
+<div class="delivery-box">
+
+<p>🚚 Delivery Charge — <strong>70 Tk</strong></p>
+
+<p class="note">
+A delivery charge of 70 Tk will automatically be added to every order.
+</p>
+
+</div>
+
+</section>
+
+<section id="cart">
+
+<h2>🛒 Your Cart</h2>
+
+<div id="cart-items">
+
+<p>Your cart is empty.</p>
+
+</div>
+
+<h3 id="total">
+Total: 0 Tk
+</h3>
+
+<button id="checkout-btn">
+Proceed to Checkout
+</button>
+
+</section>
+
+<section id="reviews">
+
+<h2>⭐ Customer Reviews</h2>
+
+<div class="reviews-grid">
+
+<div class="review-card">
+
+⭐⭐⭐⭐⭐
+
+<p>
+"The cutest café ever! Everything tasted amazing!"
+</p>
+
+<h4>- Sarah</h4>
+
+</div>
+
+<div class="review-card">
+
+⭐⭐⭐⭐⭐
+
+<p>
+"The Bento Box was delicious. Definitely ordering again!"
+</p>
+
+<h4>- Ayesha</h4>
+
+</div>
+
+<div class="review-card">
+
+⭐⭐⭐⭐⭐
+
+<p>
+"I loved the Blue Ocean drink and the adorable packaging!"
+</p>
+
+<h4>- Mariam</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+🌸 Thank you for visiting Da Alleez Café! 🌸
+</p>
+
+<p>
+Made with love, sweetness and lots of kawaii magic. 🎀
+</p>
+
+</footer>
+
+<!-- Checkout Popup -->
+
+<div id="checkout-popup" class="popup">
+
+    <div class="popup-content">
+
+        <h2>🌸 Checkout 🌸</h2>
+
+<input id="customer-name" type="text" placeholder="Your Name">
+
+<input id="customer-phone" type="text" placeholder="Phone Number">
+
+<textarea id="customer-address" placeholder="Your Full Address"></textarea>
+
+<textarea id="customer-notes" placeholder="Notes (Optional)"></textarea>
+
+<button id="confirm-order-btn">
+Confirm Order 💕
+</button>
+
+        <button id="close-popup-btn">
+            Cancel
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init({
+    publicKey: "_KciIp2QSxTLOWO95",
+});
+</script>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
+
